@@ -1,4 +1,4 @@
-class Solution {
+class LongestPalindromicSubstringSolution {
 
     public String longestPalindrome(String s) {
 
@@ -31,5 +31,13 @@ class Solution {
         }
 
         return s.substring(left + 1, right);
+    }
+}
+
+class LongestPalindromicSubstring {
+    public static void main(String[] args) {
+        LongestPalindromicSubstringSolution sol = new LongestPalindromicSubstringSolution();
+        String s = "babad";
+        System.out.println(sol.longestPalindrome(s));
     }
 }
