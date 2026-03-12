@@ -1,23 +1,19 @@
 import java.util.*;
 
-class FourSumSolution {
-    public List<List<Integer>> fourSum(int[] nums, int target) {
+public class FourSum {
+
+    public static List<List<Integer>> fourSum(int[] nums, int target) {
 
         List<List<Integer>> res = new ArrayList<>();
-
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 3; i++) {
 
-            if (i > 0 && nums[i] == nums[i - 1]) {
-                continue;
-            }
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
 
             for (int j = i + 1; j < nums.length - 2; j++) {
 
-                if (j > i + 1 && nums[j] == nums[j - 1]) {
-                    continue;
-                }
+                if (j > i + 1 && nums[j] == nums[j - 1]) continue;
 
                 int left = j + 1;
                 int right = nums.length - 1;
@@ -33,12 +29,8 @@ class FourSumSolution {
                         left++;
                         right--;
 
-                        while (left < right && nums[left] == nums[left - 1]) {
-                            left++;
-                        }
-                        while (left < right && nums[right] == nums[right + 1]) {
-                            right--;
-                        }
+                        while (left < right && nums[left] == nums[left - 1]) left++;
+                        while (left < right && nums[right] == nums[right + 1]) right--;
 
                     } else if (sum < target) {
                         left++;
@@ -51,13 +43,14 @@ class FourSumSolution {
 
         return res;
     }
-}
 
-class FourSum {
     public static void main(String[] args) {
-        FourSumSolution sol = new FourSumSolution();
+
         int[] nums = {1, 0, -1, 0, -2, 2};
         int target = 0;
-        System.out.println(sol.fourSum(nums, target));
+
+        List<List<Integer>> result = fourSum(nums, target);
+
+        System.out.println(result);
     }
 }

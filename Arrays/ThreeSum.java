@@ -1,17 +1,15 @@
 import java.util.*;
 
-class ThreeSumSolution {
-    public List<List<Integer>> threeSum(int[] nums) {
+public class ThreeSum {
+
+    public static List<List<Integer>> threeSum(int[] nums) {
 
         List<List<Integer>> res = new ArrayList<>();
-
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 2; i++) {
 
-            if (i > 0 && nums[i] == nums[i - 1]) {
-                continue;
-            }
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
 
             int left = i + 1;
             int right = nums.length - 1;
@@ -27,12 +25,8 @@ class ThreeSumSolution {
                     left++;
                     right--;
 
-                    while (left < right && nums[left] == nums[left - 1]) {
-                        left++;
-                    }
-                    while (left < right && nums[right] == nums[right + 1]) {
-                        right--;
-                    }
+                    while (left < right && nums[left] == nums[left - 1]) left++;
+                    while (left < right && nums[right] == nums[right + 1]) right--;
 
                 } else if (sum < 0) {
                     left++;
@@ -44,12 +38,13 @@ class ThreeSumSolution {
 
         return res;
     }
-}
 
-class ThreeSum {
     public static void main(String[] args) {
-        ThreeSumSolution sol = new ThreeSumSolution();
+
         int[] nums = {-1, 0, 1, 2, -1, -4};
-        System.out.println(sol.threeSum(nums));
+
+        List<List<Integer>> result = threeSum(nums);
+
+        System.out.println(result);
     }
 }
