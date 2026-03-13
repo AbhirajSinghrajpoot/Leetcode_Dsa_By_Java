@@ -40,6 +40,7 @@ public class LinkedListCycle {
         c.next = d;
         d.next = b;
 
+        System.out.println("Head value: " + a.val);
         System.out.println(hasCycle(a));
     }
 }
