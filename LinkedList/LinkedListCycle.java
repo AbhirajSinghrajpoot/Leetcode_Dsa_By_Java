@@ -1,6 +1,6 @@
 public class LinkedListCycle {
 
-    static class ListNode {
+    public static class ListNode {
         int val;
         ListNode next;
 
