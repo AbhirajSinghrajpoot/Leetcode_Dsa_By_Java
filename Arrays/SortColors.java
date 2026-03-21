@@ -14,14 +14,18 @@ public class SortColors {
                 nums[mid] = temp;
                 low++;
                 mid++;
-            } else if (nums[mid] == 1) {
-                mid++;
-            } else {
-                int temp = nums[mid];
-                nums[mid] = nums[high];
-                nums[high] = temp;
-                high--;
+                continue;
             }
+
+            if (nums[mid] == 1) {
+                mid++;
+                continue;
+            }
+
+            int temp = nums[mid];
+            nums[mid] = nums[high];
+            nums[high] = temp;
+            high--;
         }
     }
 
