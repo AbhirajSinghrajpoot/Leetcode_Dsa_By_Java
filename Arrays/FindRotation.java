@@ -32,6 +32,7 @@ public class FindRotation {
     }
 
     // Dono matrices ke har cell ko compare karta hai.
+
     boolean equals(int[][] mat, int[][] target) {
         int n = mat.length;
 
