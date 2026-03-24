@@ -46,26 +46,24 @@ public class ConstructProductMatrix {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
+            // Input
+            int n = sc.nextInt();
+            int m = sc.nextInt();
 
-        // Input
-        int n = sc.nextInt();
-        int m = sc.nextInt();
+            int[][] grid = new int[n][m];
 
-        int[][] grid = new int[n][m];
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                grid[i][j] = sc.nextInt();
+            for (int i = 0; i < n; i++) {
+                for (int j = 0; j < m; j++) {
+                    grid[i][j] = sc.nextInt();
+                }
             }
+
+            // Solve
+            int[][] result = constructProductMatrix(grid);
+
+            // Output
+            printMatrix(result);
         }
-
-        // Solve
-        int[][] result = constructProductMatrix(grid);
-
-        // Output
-        printMatrix(result);
-
-        sc.close();
     }
 }
