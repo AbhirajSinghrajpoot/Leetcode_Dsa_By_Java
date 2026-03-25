@@ -1,8 +1,12 @@
 {
+  "files.exclude": {
+    "**/*.class": true
+  },
   "java.project.sourcePaths": [
     ".",
     "Arrays",
     "Strings",
     "LinkedList"
-  ]
+  ],
+  "java.debug.settings.onBuildFailureProceed": true
 }
