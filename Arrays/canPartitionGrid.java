@@ -58,6 +58,7 @@ public class Main {
             }
         }
 
+        
         // Output
         boolean result = canPartitionGrid(grid);
         System.out.println("Result: " + result);
