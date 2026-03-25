@@ -35,7 +35,6 @@ public class NextPermutation {
             right--;
         }
     }
-
     public static void main(String[] args) {
 
         int[] nums = {1, 5, 3, 4, 2};
