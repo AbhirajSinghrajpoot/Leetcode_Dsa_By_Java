@@ -1,5 +1,3 @@
-package BinarySearch;
-
 public class FindMin {
 
     public static int findMin(int[] nums) {

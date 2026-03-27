@@ -5,6 +5,7 @@
   "java.project.sourcePaths": [
     ".",
     "Arrays",
+    "BinarySearch",
     "Strings",
     "LinkedList"
   ],
