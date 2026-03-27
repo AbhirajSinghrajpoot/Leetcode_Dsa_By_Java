@@ -1,7 +1,8 @@
+package BinarySearch;
 
 import java.util.*;
 
-public class Main {
+public class SearchInsertPosition {
 
     public static int searchInsert(int[] nums, int target) {
         int left = 0;
@@ -23,23 +24,24 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
 
-        // Input
-        System.out.print("Enter array size: ");
-        int n = sc.nextInt();
+            // Input
+            System.out.print("Enter array size: ");
+            int n = sc.nextInt();
 
-        int[] nums = new int[n];
-        System.out.println("Enter sorted array:");
-        for (int i = 0; i < n; i++) {
-            nums[i] = sc.nextInt();
+            int[] nums = new int[n];
+            System.out.println("Enter sorted array:");
+            for (int i = 0; i < n; i++) {
+                nums[i] = sc.nextInt();
+            }
+
+            System.out.print("Enter target: ");
+            int target = sc.nextInt();
+
+            // Output
+            int result = searchInsert(nums, target);
+            System.out.println("Insert Position: " + result);
         }
-
-        System.out.print("Enter target: ");
-        int target = sc.nextInt();
-
-        // Output
-        int result = searchInsert(nums, target);
-        System.out.println("Insert Position: " + result);
     }
 }

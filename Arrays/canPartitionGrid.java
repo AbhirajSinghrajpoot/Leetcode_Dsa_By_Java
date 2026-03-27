@@ -1,8 +1,8 @@
 import java.util.*;
 
-public class Main {
+public class canPartitionGrid {
 
-    public static boolean canPartitionGrid(int[][] grid) {
+    public static boolean canPartitionGridCheck(int[][] grid) {
         int m = grid.length, n = grid[0].length;
 
         long total = 0;
@@ -39,27 +39,27 @@ public class Main {
         return false;
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        try (Scanner sc = new Scanner(System.in)) {
 
-        // Input
-        System.out.print("Enter rows: ");
-        int m = sc.nextInt();
+            // Input
+            System.out.print("Enter rows: ");
+            int m = sc.nextInt();
 
-        System.out.print("Enter cols: ");
-        int n = sc.nextInt();
+            System.out.print("Enter cols: ");
+            int n = sc.nextInt();
 
-        int[][] grid = new int[m][n];
+            int[][] grid = new int[m][n];
 
-        System.out.println("Enter grid values:");
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                grid[i][j] = sc.nextInt();
+            System.out.println("Enter grid values:");
+            for (int i = 0; i < m; i++) {
+                for (int j = 0; j < n; j++) {
+                    grid[i][j] = sc.nextInt();
+                }
             }
-        }
 
-        
-        // Output
-        boolean result = canPartitionGrid(grid);
-        System.out.println("Result: " + result);
+            // Output
+            boolean result = canPartitionGridCheck(grid);
+            System.out.println("Result: " + result);
+        }
     }
 }
