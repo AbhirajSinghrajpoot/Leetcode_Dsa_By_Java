@@ -18,7 +18,11 @@ public class MergeIntervals {
             }
         }
 
+<<<<<<< HEAD
         return merged.toArray(int[][]::new);
+=======
+        return merged.toArray(new int[merged.size()][]);
+>>>>>>> 35b015ff1fb00f0b57d8cbb862cdc14c4de88809
     }
 
     public static void main(String[] args) {
