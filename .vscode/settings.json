@@ -3,11 +3,11 @@
     "**/*.class": true
   },
   "java.project.sourcePaths": [
-    ".",
     "Arrays",
     "BinarySearch",
     "Strings",
-    "LinkedList"
+    "LinkedList",
+    "SlidingWindow"
   ],
   "java.debug.settings.onBuildFailureProceed": true
 }
