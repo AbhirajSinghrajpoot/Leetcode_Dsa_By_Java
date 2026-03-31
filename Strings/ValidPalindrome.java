@@ -24,8 +24,6 @@ public class ValidPalindrome {
         
         return true; 
     }
-
-    // --- Driver Code for VS Code ---
     public static void main(String[] args) {
         // Test cases directly from LeetCode
         String test1 = "A man, a plan, a canal: Panama";
