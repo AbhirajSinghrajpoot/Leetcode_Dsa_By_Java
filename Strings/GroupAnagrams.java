@@ -21,8 +21,6 @@ public class GroupAnagrams {
         
         return new ArrayList<>(map.values());
     }
-
-    // --- Driver Code for VS Code ---
     public static void main(String[] args) {
         String[] test1 = {"eat", "tea", "tan", "ate", "nat", "bat"};
         String[] test2 = {""};
