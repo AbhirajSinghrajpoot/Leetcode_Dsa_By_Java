@@ -10,7 +10,7 @@ class ListNode {
 
 public class MergeKSortedLists {
     
-    public static ListNode mergeKLists(ListNode[] lists) {
+    static ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) return null;
         
         PriorityQueue<ListNode> pq = new PriorityQueue<>((a, b) -> a.val - b.val);
