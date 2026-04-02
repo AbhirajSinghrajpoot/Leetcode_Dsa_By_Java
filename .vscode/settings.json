@@ -7,7 +7,8 @@
     "BinarySearch",
     "Strings",
     "LinkedList",
-    "SlidingWindow"
+    "SlidingWindow",
+    "Heap"
   ],
   "java.debug.settings.onBuildFailureProceed": true
 }
