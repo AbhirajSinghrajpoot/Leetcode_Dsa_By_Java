@@ -9,7 +9,8 @@
     "LinkedList",
     "SlidingWindow",
     "Heap",
-    "DP"
+    "DP",
+    "Tree"
   ],
   "java.debug.settings.onBuildFailureProceed": true
 }
